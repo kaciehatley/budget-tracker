@@ -57,7 +57,7 @@ const FILES_TO_CACHE = [
       return;
     }
   
-    if (event.request.url.includes("/api/images")) {
+    if (event.request.url.includes("/api/transaction")) {
       event.respondWith(
         caches.open(RUNTIME).then(cache => {
           return fetch(event.request)
